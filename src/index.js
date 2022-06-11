@@ -1,4 +1,3 @@
 import './style.css';
-/* To load images
-import Icon from './icon.png';
-*/
+import Sushi from './img/sushi.jpg';
+
