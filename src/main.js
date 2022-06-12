@@ -23,6 +23,9 @@ let createMain = function() {
 function loadMain() {
     loadHome();
     createMain();
+
+    let homeButton = Array.from(document.querySelectorAll("button"))[0];
+    homeButton.classList.add("selected");
 }
 
 export default loadMain;

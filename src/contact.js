@@ -25,6 +25,9 @@ let createContact = function() {
 function loadContact() {
     loadHome();
     createContact();
+
+    let contactButton = Array.from(document.querySelectorAll("button"))[2];
+    contactButton.classList.add("selected");
 }
 
 export default loadContact;

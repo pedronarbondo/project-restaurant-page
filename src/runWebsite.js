@@ -1,4 +1,8 @@
 import GitLogo from "./img/git.png";
+import loadMain from "./main";
+import loadMenu from "./menu";
+import loadContact from "./contact";
+
 
 function createStuff(element, theClass, textContent) {
     let thing = document.createElement(element);
@@ -23,12 +27,14 @@ let createHome = function() {
     buttonList.className = "buttonList";
 
     const homeButton = createStuff("button", "homeButton", "Home");
-    homeButton.classList.add("selected");
     const menuButton = createStuff("button", "menuButton", "Menu");
     const contactButton = createStuff("button", "contactButton", "Contact");
 
     buttonList.append(homeButton, menuButton, contactButton);
 
+    homeButton.onclick = loadMain;
+    menuButton.onclick = loadMenu;
+    contactButton.onclick = loadContact;
 
     const footer = document.createElement("div");
     footer.className = "footer";
@@ -57,4 +63,4 @@ function loadHome() {
     createHome();
 }
 
-export {loadHome, createStuff};
+export {createHome, loadHome, createStuff};

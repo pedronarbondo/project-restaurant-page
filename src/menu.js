@@ -41,6 +41,9 @@ const createMenuItem = function(name, description, src) {
 function loadMenu() {
     loadHome();
     createMenu();
+
+    let menuButton = Array.from(document.querySelectorAll("button"))[1];
+    menuButton.classList.add("selected");
 }
 
 
