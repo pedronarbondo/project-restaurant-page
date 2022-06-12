@@ -1,3 +1,5 @@
+import GitLogo from "./img/git.png";
+
 function createStuff(element, theClass, textContent) {
     let thing = document.createElement(element);
     thing.className = theClass;
@@ -21,13 +23,27 @@ let createHome = function() {
     buttonList.className = "buttonList";
 
     const homeButton = createStuff("button", "homeButton", "Home");
+    homeButton.classList.add("selected");
     const menuButton = createStuff("button", "menuButton", "Menu");
     const contactButton = createStuff("button", "contactButton", "Contact");
 
     buttonList.append(homeButton, menuButton, contactButton);
 
+
+    const footer = document.createElement("div");
+    footer.className = "footer";
+
+    const footerContent = createStuff("h3", "footerText", "Copyright © 2022 pedronarbondo");
+    const gitLink = document.createElement("a");
+    gitLink.setAttribute("href", "https://github.com/pedronarbondo")
+    const gitLogo = new Image();
+    gitLogo.src = GitLogo;
+    gitLogo.className = ("gitLogo");
+    gitLink.append(gitLogo);
+
+    footer.append(footerContent, gitLink);
     header.append(headerText, buttonList);
-    body.append(header);
+    body.append(header, footer);
 }
 
 function loadHome() {
@@ -41,4 +57,4 @@ function loadHome() {
     createHome();
 }
 
-export default loadHome;
+export {loadHome, createStuff};
