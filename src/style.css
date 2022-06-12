@@ -1,3 +1,73 @@
-body {
+@font-face {
+    font-family: "StylishFont";
+    src: url("./fonts/NightinTokyo.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "OtherFont";
+    src: url("./fonts/Manga.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+html, body {
     background: url(./img/sushi.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: black;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 300px;
+    opacity: 0.8;
+    background-color: black;
+    margin-top: 0px;
+
+    display: flex;
+    flex-direction: column;
+    place-items: center center;
+}
+
+.headerText {
+    margin-bottom: -3.5rem;
+}
+.sushiHeader {
+    font-family: "OtherFont";
+    font-size: 2.5rem;
+}
+.restaurantName {
+    font-family: "StylishFont";
+    font-size: 6rem;
+    position: relative;
+    top: -3rem;
+}
+
+.buttonList {
+    display: flex;
+    gap: 6rem;
+}
+
+.buttonList>* {
+    font-family: "StylishFont";
+    font-size: 1.7rem;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    top: 0;
+}
+
+.buttonList>*:hover {
+    top: -14px;
 }
