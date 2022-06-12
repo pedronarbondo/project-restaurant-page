@@ -5,10 +5,12 @@ import OtherFont from "./fonts/Manga.ttf";
 
 import loadMain from "./main";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 
 loadMain();
 loadMenu();
+
 
 /*const buttons = Array.from(document.querySelectorAll("button"));
 const button1 = buttons[0];
